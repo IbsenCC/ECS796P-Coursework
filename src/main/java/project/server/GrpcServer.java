@@ -10,7 +10,7 @@ import java.io.IOException;
 public class GrpcServer extends Thread {
     int port;
     int threadNumber;
-    static int startPort = 8081;
+    static int startPort = 8080;
 
     private static final Logger logger = LoggerFactory.getLogger(GrpcServer.class);
 
@@ -29,8 +29,8 @@ public class GrpcServer extends Thread {
         int numberOfProcessors = runtime.availableProcessors();
         System.out.println("Number of processors is " + numberOfProcessors);
 
-        for(int i = 0; i < numberOfProcessors; i++) {
-            new GrpcServer(startPort + i,i).start();
+        for(int i = 1; i <= numberOfProcessors; i++) {
+            new GrpcServer(startPort + i, i).start();
         }
     }
 
