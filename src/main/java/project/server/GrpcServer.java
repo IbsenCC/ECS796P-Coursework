@@ -11,7 +11,6 @@ public class GrpcServer extends Thread {
     int port;
     int threadNumber;
     static int startPort = 8081;
-    static int[] ports = {8081,8082,8083,8084,8085,8086,8087,8088};
 
     private static final Logger logger = LoggerFactory.getLogger(GrpcServer.class);
 
