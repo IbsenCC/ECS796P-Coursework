@@ -90,7 +90,7 @@ public class BlockMultImpl implements BlockMult {
         long endTime = System.nanoTime();
         long footprint= endTime - startTime;
 
-        int numBlockCalls = 7;
+        int numBlockCalls = 8;
         int numberServer = (int) Math.ceil((float)footprint*(float)numBlockCalls/(float)deadline);
         numberServer = numberServer <= 8 ? numberServer : 8;
 
